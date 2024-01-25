@@ -1,6 +1,8 @@
 machine learning project for detection ICU Patient 
 
 ##Pre-processing and Feature Engineering:
+
+
 • Implemented feature selection process, keeping a single feature with a correlation of 1
 while discarding others, which resulted in a reduced feature set of 88 variables.
 Handling “window”:
@@ -25,11 +27,13 @@ potential outlier influence.
 
 
 ##PCA:
+
 Employing PCA, we reduced the dimensionality to 40 components. Temporarily excluding
 "gender" and "ICU" for preservation, they were later reintegrated since "gender" was supposed to
 undergo ethical addressing using aif360.
 
 ##AIF 360:
+
 Two sets of privileged (gender 1) and unprivileged (gender 0) data were created, revealing an
 imbalance in the fairness matrix. Initial model evaluation using logistic regression yielded
 accuracy of 91%. Subsequent hyperparameter tuning and classification matrix analysis indicated
@@ -40,6 +44,7 @@ removal of data imbalance without compromising accuracy, a favorable outcome.
 
 
 ##Modelling:
+
 • Dataset was split into train and test, and models like random forest, logistic regression,
 and Support Vector Classification were implemented, with the following accuracy:
 Model Accuracy
