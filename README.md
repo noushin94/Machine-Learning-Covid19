@@ -6,22 +6,27 @@ machine learning project for detection ICU Patient
 • Implemented feature selection process, keeping a single feature with a correlation of 1
 while discarding others, which resulted in a reduced feature set of 88 variables.
 Handling “window”:
+
 • This addressed the temporal aspect of patient records (“window” feature). Using a unique
 method we discarded features other than ICU with value of 1 since others were not useful
-for prediction, resulting in a dataset reduction to 1605 rows.
-Changing categorical to numerical:
+for prediction, resulting in a dataset reduction to 1605 rows
+
+.Changing categorical to numerical:
 • Categorical features like "AGE_PERCENTILE" and "WINDOW" were handled through
 dummy variables, after the resolution of the "window" feature, enhancing the dataset's
 ability for predictive modeling.
 Missing values:
+
 • Initial missing value handling involved Linear Interpolation; however, the feature
 "ALBUMIN_DIFF" was dropped due to high missing values. Subsequently, after
 addressing skewness, the remaining missing values were resolved using a simple imputer,
 resulting in a uniform dataset.
 Handling Skewness:
+
 • We implemented two skewness handling techniques, logarithmic transformation for
 right-skewed data and reciprocal transformation for left-skewed data. These methods
 effectively addressed skewness, optimizing the distribution of features.
+
 • Observing large or infinite values in the "other" column, we dropped it to prevent
 potential outlier influence.
 
@@ -51,6 +56,7 @@ Model Accuracy
 Random Forest 88%
 Logistic Regression 86%
 Support Vector Classification 89%
+
 • Hyperparameter tuning and model evaluation:
 o In this section we used cross validation score and GridSearchCV to compare and
 discover the best possible results, although GridSearchCV returned acceptable
