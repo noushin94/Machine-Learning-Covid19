@@ -4,26 +4,31 @@ machine learning project for detection ICU Patient
 
 
 • Implemented feature selection process, keeping a single feature with a correlation of 1
-while discarding others, which resulted in a reduced feature set of 88 variables.
-Handling “window”:
+while discarding others, which resulted in a reduced feature set of 88 variables
+
+.Handling “window”:
 
 • This addressed the temporal aspect of patient records (“window” feature). Using a unique
 method we discarded features other than ICU with value of 1 since others were not useful
 for prediction, resulting in a dataset reduction to 1605 rows
 
 .Changing categorical to numerical:
+
 • Categorical features like "AGE_PERCENTILE" and "WINDOW" were handled through
 dummy variables, after the resolution of the "window" feature, enhancing the dataset's
-ability for predictive modeling.
-Missing values:
+ability for predictive modeling
+
+.Missing values:
 
 • Initial missing value handling involved Linear Interpolation; however, the feature
 "ALBUMIN_DIFF" was dropped due to high missing values. Subsequently, after
 addressing skewness, the remaining missing values were resolved using a simple imputer,
-resulting in a uniform dataset.
-Handling Skewness:
+resulting in a uniform dataset
 
-• We implemented two skewness handling techniques, logarithmic transformation for
+
+.Handling Skewness:
+
+• I implemented two skewness handling techniques, logarithmic transformation for
 right-skewed data and reciprocal transformation for left-skewed data. These methods
 effectively addressed skewness, optimizing the distribution of features.
 
@@ -33,7 +38,7 @@ potential outlier influence.
 
 ##PCA:
 
-Employing PCA, we reduced the dimensionality to 40 components. Temporarily excluding
+Employing PCA, I reduced the dimensionality to 40 components. Temporarily excluding
 "gender" and "ICU" for preservation, they were later reintegrated since "gender" was supposed to
 undergo ethical addressing using aif360.
 
@@ -58,12 +63,14 @@ Logistic Regression 86%
 Support Vector Classification 89%
 
 • Hyperparameter tuning and model evaluation:
-o In this section we used cross validation score and GridSearchCV to compare and
+o In this section I used cross validation score and GridSearchCV to compare and
 discover the best possible results, although GridSearchCV returned acceptable
 accuracy rates, the results with cross validation score were considerably better.
 o In conclusion, after Hyperparameter tuning and model evaluation, we reached the
 following accuracy rates which were our optimal outcome:
+
 Model Accuracy
+
 Random Forest 90%
 Logistic Regression 89%
 Support Vector Classification 91%
