@@ -22,6 +22,8 @@ right-skewed data and reciprocal transformation for left-skewed data. These meth
 effectively addressed skewness, optimizing the distribution of features.
 • Observing large or infinite values in the "other" column, we dropped it to prevent
 potential outlier influence.
+
+
 ##PCA:
 Employing PCA, we reduced the dimensionality to 40 components. Temporarily excluding
 "gender" and "ICU" for preservation, they were later reintegrated since "gender" was supposed to
@@ -35,6 +37,8 @@ persistent data imbalance. To address this, the gender feature was temporarily r
 in decreased accuracy. The gender feature was retained, and reweighing algorithms were applied.
 Post-implementation, classification and binary label dataset matrix analyses indicated the
 removal of data imbalance without compromising accuracy, a favorable outcome.
+
+
 ##Modelling:
 • Dataset was split into train and test, and models like random forest, logistic regression,
 and Support Vector Classification were implemented, with the following accuracy:
