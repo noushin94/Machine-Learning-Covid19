@@ -1,4 +1,6 @@
 # 🦠 Machine-Learning-Covid19
+![image](https://github.com/user-attachments/assets/11755040-8136-483e-8aa3-13b361de662b)
+
 
 This repository contains a machine learning project aimed at detecting the likelihood of COVID-19 patients requiring ICU support. Utilizing a range of preprocessing, feature engineering, and modeling techniques, this project strives to improve predictive accuracy and aid in better healthcare management.
 
